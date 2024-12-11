@@ -6,10 +6,11 @@ Build a simple task management API that allows users to create, read, update, an
 ## Requirements
 
 1. **Setup:**
-   - Create a new Laravel project.
+   - Create a fork of this repo.
+   - Create a new Laravel project in your fork.
    - Use Laravel Sanctum for API authentication.
 
-2. **Database:**
+3. **Database:**
    - Create a migration for a `users` table (if not already provided by Laravel).
    - Create a migration for a `tasks` table with the following fields:
      - `id`: Primary key
@@ -20,10 +21,10 @@ Build a simple task management API that allows users to create, read, update, an
      - `created_at`: Timestamp
      - `updated_at`: Timestamp
 
-3. **Models:**
+4. **Models:**
    - Create a `Task` model and define the relationship with the `User ` model (one-to-many).
 
-4. **Controllers:**
+5. **Controllers:**
    - Create a `TaskController` with the following methods:
      - `index()`: List all tasks for the authenticated user.
      - `store(Request $request)`: Create a new task. Validate the request data and dispatch an event for task creation.
@@ -31,14 +32,14 @@ Build a simple task management API that allows users to create, read, update, an
      - `update(Request $request, $id)`: Update a specific task. Validate the request data.
      - `destroy($id)`: Delete a specific task.
 
-5. **Events and Listeners:**
+6. **Events and Listeners:**
    - Create an event called `TaskCreated` that is dispatched when a new task is created.
    - Create a listener called `SendTaskCreatedNotification` that listens for the `TaskCreated` event and handles the notification (e.g., log a message or send an email).
 
-6. **Queues:**
+7. **Queues:**
    - Configure the listener to be queued, so the notification is processed asynchronously. Ensure that the queue driver is set up (e.g., using the `sync` driver for simplicity).
 
-7. **Routes:**
+8. **Routes:**
    - Define API routes for the task management functionality in `routes/api.php`:
      - `GET /tasks`: List all tasks
      - `POST /tasks`: Create a new task
@@ -46,10 +47,10 @@ Build a simple task management API that allows users to create, read, update, an
      - `PUT /tasks/{id}`: Update a specific task
      - `DELETE /tasks/{id}`: Delete a specific task
 
-8. **Middleware:**
+9. **Middleware:**
    - Implement middleware to ensure that users can only access their own tasks. Apply this middleware to the task routes.
 
-9. **Testing:**
+10. **Testing:**
    - Write feature tests for the following scenarios:
      - User can create a task.
      - User can retrieve their tasks.
@@ -58,7 +59,7 @@ Build a simple task management API that allows users to create, read, update, an
      - User cannot access tasks that do not belong to them.
      - Verify that the `TaskCreated` event is dispatched when a task is created.
 
-10. **Documentation:**
+11. **Documentation:**
     - Provide a brief README file explaining how to set up the project, run migrations, and test the API endpoints using Postman or any other API client.
 
 ## Evaluation Criteria
