@@ -50,25 +50,15 @@ Build a simple task management API that allows users to create, read, update, an
 9. **Middleware:**
    - Implement middleware to ensure that users can only access their own tasks. Apply this middleware to the task routes.
 
-10. **Testing:**
-   - Write feature tests for the following scenarios:
-     - User can create a task.
-     - User can retrieve their tasks.
-     - User can update their task.
-     - User can delete their task.
-     - User cannot access tasks that do not belong to them.
-     - Verify that the `TaskCreated` event is dispatched when a task is created.
-
-11. **Documentation:**
+10. **Documentation:**
     - Provide a brief README file explaining how to set up the project, run migrations, and test the API endpoints using Postman or any other API client.
 
 ## Evaluation Criteria
 
 - **Code Quality:** Clean, readable, and maintainable code.
 - **Use of Laravel Features:** Proper use of Eloquent, middleware, events, listeners, and queues.
-- **Testing:** Comprehensive tests that cover the main functionalities and event dispatching.
 - **Documentation:** Clarity and completeness of the README file.
-- **Time Management:** Ability to complete the assignment within the given timeframe.
+- **Time Management:** Ability to complete the assignment within the 5 hours.
 
 ## Submission
 
